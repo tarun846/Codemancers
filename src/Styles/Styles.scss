@@ -1,154 +1,33 @@
+
 *{
     padding :0 ;
     margin : 0 ;
     box-sizing: border-box;
     // overflow: hidden;
 }
-section{
-     min-height: 50vh;
+@import 'Textarea';
+@import 'gif';
+@import 'Comment';
+
+.main_btn_facebook{
+    margin: 1rem;
+    padding: 10px 15px;
+    font-size: 1rem;
 }
-.textheader{
-     width: auto;
-    min-height: 7vh;
-    background-color: whitesmoke;
-    display: flex;
-  align-items: center;
- 
-    .textheader_children{
-        margin-left: 2rem;
-        display: flex;
-        align-items: center;
-        span {
-            margin-left: 4px;
-            font-size: 12px;
-            font-family: sans-serif;
-        }
-   img {
-       width: 2rem;
-   }
-    }
-}
-.textArea{
-     min-height: 40vh;
-     width: 100%;
-     position: relative;
-    textarea {
-        outline: none;
-        font-family: monospace;
-        border: none;
-        padding-left: 2.1rem;
-        padding-top: 20px;
- 
-   resize: none;
-    }
-    .profile_img{
-        width: 2rem;
-        position: absolute;
-        top: 10px;
-        left: 0;
-    }
-}
-.text_buttonsContainer{
+
+.Faceebok_comment{
+    min-height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: unset;
-    .Text_buttons{
-        // background-color: rebeccapurple;
-        position: relative;
-        .input {
-            width: 15rem;
-            height: 2rem;
-            border-radius: 50px;
-             cursor: pointer;
-             background-color: whitesmoke;
-            border: rgba($color: #000000, $alpha: 1);
-             padding-top: 5px;
-             padding-left: 14px; 
-        }
-        img {
-            width: 1rem;
-            position: absolute;
-            right: 10px;
-           top : 8px
-        }
-    }
-}
-
-.Search_image{
-    border: 1px solid black;
-    height: 20rem;
-    width: 15rem;
-     
-}
-.triangle{
-    position: absolute;
-    top: -1.2rem;
-    left: 12rem;
-width: 0px;
-height: 0px;
-border: 10px solid  ;
-border-color: transparent;
-border-bottom-color:black ;
 
 }
-.gif_container{
-    position: relative;
-    height: 50vh;
-    width: auto;
-    background-color: white ;
-    z-index: 1;
+.cross{
+    font-family: monospace;
+    margin-left: 10px;
+    font-size: 1rem;
+    cursor: pointer;
 }
-.gif_mainContainer{
-    position: absolute;
-    bottom: 4rem;
-    left: 3rem;
-    background-color: white ;
-  
-  
-    
-}
-.gif_input{
-    width: 100%;;
-    padding-left: 4px;
-    height :2rem;
-}
-@media screen and (max-width : 1200px){
-    .gif_mainContainer{
-  left: 5rem;
-    }
-}
-@media screen and (max-width : 720px){
-    .gif_mainContainer{
-  left: 1rem;
-  bottom: 40px;
-    }
-}
-.image_grid{
-    display: grid;
-    overflow-y: scroll;
-    height: 80%;
-    width: 100%;
-    grid-template-columns: 1fr;
-  z-index: -100;
-  background-color: white ;
 
-    img{
-        width: 100%;
-        object-fit: contain;
-        // z-index: -1;
-    }
-}
-.Comments{
-    h1{
-        font-family: sans-serif;
-        font-weight: bolder;
-    }
-    .comment{
-          padding-top: 1rem;
-    }
-}
-.comment_profile{
-    width: 2.2rem;
-}
+
+
+
+

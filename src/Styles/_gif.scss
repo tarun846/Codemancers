@@ -1,0 +1,64 @@
+.Search_image{
+    border: 1px solid black;
+    height: 20rem;
+    width: 15rem;
+     
+}
+.triangle{
+    position: absolute;
+    top: -1.2rem;
+    left: 12rem;
+width: 0px;
+height: 0px;
+border: 10px solid  ;
+border-color: transparent;
+border-bottom-color:black ;
+
+}
+.gif_container{
+    position: relative;
+    height: 50vh;
+    width: auto;
+    background-color: white ;
+    z-index: 1;
+}
+.gif_mainContainer{
+    position: absolute;
+    bottom: -1rem;
+    left: 3rem;
+    background-color: white ;
+  
+  
+    
+}
+.gif_input{
+    width: 100%;;
+    padding-left: 4px;
+    height :2rem;
+}
+@media screen and (max-width : 1400px){
+    .gif_mainContainer{
+  left: 15rem;
+    }
+}
+@media screen and (max-width : 910px){
+    .gif_mainContainer{
+    left: 2rem;
+
+    }
+}
+.image_grid{
+    display: grid;
+    overflow-y: scroll;
+    height: 80%;
+    width: 100%;
+    grid-template-columns: 1fr;
+  z-index: -100;
+  background-color: white ;
+
+    img{
+        width: 100%;
+        object-fit: contain;
+      
+    }
+}

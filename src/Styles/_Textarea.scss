@@ -1,0 +1,91 @@
+section{
+    width : 100%;
+    height :  100vh ;
+    background-color: rgba(200, 200, 200,0.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    padding-top: 5rem;
+    border-radius: 10px;
+}
+.Main_textarea{
+   min-height: auto;
+   box-shadow: 10px 5px 10px 10px rgba($color: #000000, $alpha: 0.3);
+   border-radius: 20px;
+   background-color: white;
+}
+.textheader{
+   
+    width: auto;
+    min-height: 7vh;
+    background-color: whitesmoke;
+    display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+    
+  .textheader_children{
+
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+        span {
+            margin-left: 4px;
+            font-size: 12px;
+            font-family: sans-serif;
+        }
+   img {
+       width: 2rem;
+   }
+    }
+}
+.textArea{
+     min-height: 40vh;
+     width: 100%;
+     position: relative;
+     font-family: sans-serif;
+    textarea {
+        outline: none;
+        font-family: monospace;
+        border: none;
+        padding-left: 2.1rem;
+        padding-top: 20px;
+        resize: none;
+    }
+    .profile_img{
+        width: 2rem;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+}
+.text_buttonsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: unset;
+    .Text_buttons{
+        // background-color: rebeccapurple;
+        position: relative;
+        .input {
+            width: 15rem;
+            height: 2rem;
+            border-radius: 50px;
+             cursor: pointer;
+             background-color: whitesmoke;
+            border: rgba($color: #000000, $alpha: 1);
+             padding-top: 5px;
+             padding-left: 14px; 
+             width: 15rem;  
+        }
+        img {
+            width: 1rem;
+            position: absolute;
+            right: 10px;
+           top : 8px
+        }
+    }
+}

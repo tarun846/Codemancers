@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../Assets/photo (2).png'
+import profile from '../Assets/photo (2).png';
 
 function Comment({comments}) {
    
@@ -9,15 +9,17 @@ function Comment({comments}) {
         return (
             <div key = {i}  className = 'comment' > 
             <span> <img src = {profile} className = 'comment_profile' />  </span>
-              <h1>  {e.text} </h1>
-              <img src ={e.imgid} />
+             <div className = 'Comment_whole'  >  
+                    <h4>  {e.text} </h4>
+              <img src ={e.imgid}  className = 'comment_img' />
+             </div>
             </div>
         )
     })
 
     return (
         <div className = 'Comments' >
-          <h1>   Comments </h1>
+          <h1>   Comments... </h1>
             {data}
         </div>
     )

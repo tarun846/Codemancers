@@ -1,0 +1,44 @@
+.Comments{
+    padding: 1rem;
+    
+    .comment_profile{
+     width: 2.2rem;
+     
+  
+         
+
+    
+
+   
+ }
+   h1{
+        font-family: sans-serif;
+        font-weight: bolder;
+        text-align: justify;
+        padding-left: 2px;
+    }
+ .comment{
+    padding-top: 1rem;
+    display:flex;
+
+    // text-align: center;
+         
+
+
+
+
+}
+
+ .Comment_whole{
+   
+    padding-left: 10px;
+     display : flex ; 
+     flex-direction: column;
+
+     h4{
+         width: 20rem;
+          word-wrap: break-word;
+     }
+}
+  
+}

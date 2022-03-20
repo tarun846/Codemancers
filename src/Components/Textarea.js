@@ -5,7 +5,7 @@ import video from '../Assets/photo (3).png'
 import profile from '../Assets/photo (2).png'
 import GifSearch from './GifSearch'
 
-function Textarea({comments, setcomments}) {
+function Textarea({comments, setcomments ,setShow}) {
 
     const [data, setdata] = useState(false)
     const [value , setvalue] = useState(' ')
@@ -24,23 +24,26 @@ function Textarea({comments, setcomments}) {
    setimagedata('')
    setvalue('')
    setdata(false)
+   setShow(false)
     }
        
    
      }
 
-     function handleclick (params) {
+     function handleclick () {
           setimagedata('')
           setdata(!data)
        }
     return (
           <section >
+       <div className = 'Main_textarea'  >
 
-            <div className = 'textheader' >
+
+            <div className = 'textheader' style = {{position : 'relative'}}  >
 
             <div className = 'textheader_children' >
 
-               <img src = {Pen} />
+               <img src = {Pen}  alt ='pen'  />
 
               <span> Compose post </span>
 
@@ -48,7 +51,7 @@ function Textarea({comments, setcomments}) {
 
          <div  className = 'textheader_children'>
 
-      <img src = {photo} />
+      <img src = {photo} alt ='photo' />
 
      <span> Photo/Video Album </span>
 
@@ -57,11 +60,12 @@ function Textarea({comments, setcomments}) {
           <div className = 'textheader_children'>
 
 
-   <img src = {video} />
+      <img src = {video} alt = 'video' />
 
-   <span> Live Video </span>
+       <span> Live Video </span>
 
         </div>
+        <h4 onClick = {()=>{setShow(false)}} className = 'cross'  > X </h4>
 
             </div>
 
@@ -73,9 +77,9 @@ function Textarea({comments, setcomments}) {
              placeholder = 'Comment...'
              />
 
-           { imagedata !== '' ? <img src = {imagedata}  className = 'image_positon' /> : ' '   }  
+           { imagedata !== '' ? <img src = {imagedata}  className = 'image_positon'   /> : ' '   }  
 
-         <img  src = {profile}  className = 'profile_img' />
+         <img  src = {profile}   className = 'profile_img'   />
 
          <div className = 'text_buttonsContainer' >
 
@@ -88,12 +92,13 @@ function Textarea({comments, setcomments}) {
               <div className = 'input' disabled = {true}  children = 'Submit' onClick = {submit}  />
                <img src = {profile} /> 
            </div>
-           
             </div>
-           
+         
+            </div>
+            { data ?    <GifSearch setimagedata = {setimagedata}  setdata = {setdata} /> : '' }
+
             </div>
 
-            { data ?    <GifSearch setimagedata = {setimagedata}  setdata = {setdata} /> : '' }
         </section>
     )
 }

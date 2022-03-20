@@ -6,7 +6,29 @@
 }
 
 section {
-  min-height: 50vh;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  padding-top: 5rem;
+  border-radius: 10px;
+}
+
+.Main_textarea {
+  min-height: auto;
+  -webkit-box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-color: white;
 }
 
 .textheader {
@@ -19,6 +41,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .textheader .textheader_children {
@@ -45,6 +70,7 @@ section {
   min-height: 40vh;
   width: 100%;
   position: relative;
+  font-family: sans-serif;
 }
 
 .textArea textarea {
@@ -89,6 +115,7 @@ section {
   border: black;
   padding-top: 5px;
   padding-left: 14px;
+  width: 15rem;
 }
 
 .text_buttonsContainer .Text_buttons img {
@@ -125,7 +152,7 @@ section {
 
 .gif_mainContainer {
   position: absolute;
-  bottom: 4rem;
+  bottom: -1rem;
   left: 3rem;
   background-color: white;
 }
@@ -136,16 +163,15 @@ section {
   height: 2rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .gif_mainContainer {
-    left: 5rem;
+    left: 15rem;
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 910px) {
   .gif_mainContainer {
-    left: 1rem;
-    bottom: 40px;
+    left: 2rem;
   }
 }
 
@@ -167,16 +193,59 @@ section {
      object-fit: contain;
 }
 
+.Comments {
+  padding: 1rem;
+}
+
+.Comments .comment_profile {
+  width: 2.2rem;
+}
+
 .Comments h1 {
   font-family: sans-serif;
   font-weight: bolder;
+  text-align: justify;
+  padding-left: 2px;
 }
 
 .Comments .comment {
   padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.comment_profile {
-  width: 2.2rem;
+.Comments .Comment_whole {
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Comments .Comment_whole h4 {
+  width: 20rem;
+  word-wrap: break-word;
+}
+
+.main_btn_facebook {
+  margin: 1rem;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.Faceebok_comment {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cross {
+  font-family: monospace;
+  margin-left: 10px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Styles.css.map */
