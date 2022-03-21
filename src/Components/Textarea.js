@@ -7,33 +7,36 @@ import GifSearch from './GifSearch'
 
 function Textarea({comments, setcomments ,setShow}) {
 
-    const [data, setdata] = useState(false)
-    const [value , setvalue] = useState(' ')
-    const [imagedata , setimagedata] = useState('')
+      const [data, setdata] = useState(false)
+      const [value , setvalue] = useState(' ')
+      const [imagedata , setimagedata] = useState('')
 
   
     function submit() { 
-       if (imagedata !== '' && value !== '' )  {
+       
+        if (imagedata !== '' && value !== '' )  {
        
         const dataobject = {
         imgid : imagedata,
-        text : value
+        text : value,
+        id :Date.now()
        }
    
-   setcomments([...comments , dataobject   ])
-   setimagedata('')
-   setvalue('')
-   setdata(false)
-   setShow(false)
+     setcomments([...comments , dataobject   ])
+     setimagedata('')
+     setvalue('')
+     setdata(false)
+     setShow(false)
     }
        
    
-     }
+    }
 
      function handleclick () {
           setimagedata('')
           setdata(!data)
        }
+
     return (
           <section >
        <div className = 'Main_textarea'  >
@@ -60,7 +63,7 @@ function Textarea({comments, setcomments ,setShow}) {
           <div className = 'textheader_children'>
 
 
-      <img src = {video} alt = 'video' />
+      <img src = {video} alt = 'video'  />
 
        <span> Live Video </span>
 
@@ -71,7 +74,7 @@ function Textarea({comments, setcomments ,setShow}) {
 
             <div className = 'textArea' >
 
-             <textarea rows = '10' cols  = '60'
+             <textarea 
              value = {value}
              onChange = {(e)=> setvalue(e.target.value) }
              placeholder = 'Comment...'

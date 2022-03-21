@@ -10,7 +10,7 @@ function App() {
       {  show === true ?  <Textarea  setcomments = {setcomments} comments = {comments} setShow = {setShow} />  : '' }
       <button onClick = {()=>{setShow(true)}}  disabled = {show} className = 'main_btn_facebook'  > Add a comment </button>
        
-       <Comment comments = {comments} />
+       <Comment comments = {comments} setcomments = {setcomments} />
       </div>
   )
 }

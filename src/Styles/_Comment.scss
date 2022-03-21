@@ -20,11 +20,9 @@
  .comment{
     padding-top: 1rem;
     display:flex;
-
     // text-align: center;
          
-
-
+ 
 
 
 }
@@ -34,11 +32,30 @@
     padding-left: 10px;
      display : flex ; 
      flex-direction: column;
-
+     width: 20rem;
      h4{
-         width: 20rem;
+        width: 20rem;
           word-wrap: break-word;
      }
 }
   
+}
+.text_box_comment{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 1rem;
+     
+}
+.comment_img{
+    width: 100%;
+}
+.trash{
+    width: 1.5rem;
+    object-fit: contain;
+    cursor: pointer;
+    
+}
+.img_Container{
+display: flex;
+align-items: flex-start;
 }

@@ -75,11 +75,13 @@ section {
 
 .textArea textarea {
   outline: none;
+  min-height: 30vh;
   font-family: monospace;
   border: none;
   padding-left: 2.1rem;
   padding-top: 20px;
   resize: none;
+  width: 100%;
 }
 
 .textArea .profile_img {
@@ -125,10 +127,45 @@ section {
   top: 8px;
 }
 
+@media screen and (max-width: 500px) {
+  .Main_textarea {
+    margin: 2rem;
+    width: 90%;
+  }
+  .textheader {
+    min-height: 10vh;
+  }
+  .textheader {
+    min-height: 5vh;
+  }
+  .textheader .textheader_children img {
+    width: 1rem;
+  }
+  .text_buttonsContainer .Text_buttons .input {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section {
+    padding-top: 5rem;
+  }
+  .textheader .textheader_children {
+    margin-left: 10px;
+  }
+  .textheader .textheader_children span {
+    font-size: 10px;
+  }
+}
+
 .Search_image {
   border: 1px solid black;
   height: 20rem;
   width: 15rem;
+}
+
+.Search_image button {
+  width: 100%;
 }
 
 .triangle {
@@ -144,9 +181,7 @@ section {
 
 .gif_container {
   position: relative;
-  height: 50vh;
   width: auto;
-  background-color: white;
   z-index: 1;
 }
 
@@ -154,25 +189,12 @@ section {
   position: absolute;
   bottom: -1rem;
   left: 3rem;
-  background-color: white;
 }
 
 .gif_input {
   width: 100%;
   padding-left: 4px;
   height: 2rem;
-}
-
-@media screen and (max-width: 1400px) {
-  .gif_mainContainer {
-    left: 15rem;
-  }
-}
-
-@media screen and (max-width: 910px) {
-  .gif_mainContainer {
-    left: 2rem;
-  }
 }
 
 .image_grid {
@@ -191,6 +213,41 @@ section {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media screen and (max-width: 1400px) {
+  .gif_mainContainer {
+    left: 15rem;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .gif_mainContainer {
+    left: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gif_mainContainer {
+    bottom: -1rem;
+    left: 1rem;
+  }
+  .Search_image {
+    width: 12rem;
+  }
+  .gif_container {
+    height: 45vh;
+  }
+  .triangle {
+    left: 5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gif_mainContainer {
+    bottom: 0rem;
+    left: 1rem;
+  }
 }
 
 .Comments {
@@ -224,11 +281,40 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 20rem;
 }
 
 .Comments .Comment_whole h4 {
   width: 20rem;
   word-wrap: break-word;
+}
+
+.text_box_comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 1rem;
+}
+
+.comment_img {
+  width: 100%;
+}
+
+.trash {
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.img_Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .main_btn_facebook {
@@ -247,5 +333,18 @@ section {
   margin-left: 10px;
   font-size: 1rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 740px) {
+  .image_positon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main_btn_facebook {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=Styles.css.map */

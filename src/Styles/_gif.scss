@@ -3,6 +3,9 @@
     height: 20rem;
     width: 15rem;
      
+    button{
+        width: 100%;
+    }
 }
 .triangle{
     position: absolute;
@@ -17,17 +20,18 @@ border-bottom-color:black ;
 }
 .gif_container{
     position: relative;
-    height: 50vh;
+    // height: 50vh;
     width: auto;
-    background-color: white ;
+  
     z-index: 1;
+
 }
 .gif_mainContainer{
     position: absolute;
     bottom: -1rem;
     left: 3rem;
-    background-color: white ;
-  
+
+    
   
     
 }
@@ -36,17 +40,8 @@ border-bottom-color:black ;
     padding-left: 4px;
     height :2rem;
 }
-@media screen and (max-width : 1400px){
-    .gif_mainContainer{
-  left: 15rem;
-    }
-}
-@media screen and (max-width : 910px){
-    .gif_mainContainer{
-    left: 2rem;
 
-    }
-}
+
 .image_grid{
     display: grid;
     overflow-y: scroll;
@@ -61,4 +56,41 @@ border-bottom-color:black ;
         object-fit: contain;
       
     }
+}
+@media screen and (max-width : 1400px){
+    .gif_mainContainer{
+  left: 15rem;
+    }
+}
+@media screen and (max-width : 910px){
+    .gif_mainContainer{
+        left: 2rem;
+
+    }
+}
+
+
+@media screen and (max-width : 500px){
+    .gif_mainContainer{
+        bottom: -1rem;
+        left: 1rem;
+      
+    }
+    .Search_image{
+    
+        width: 12rem;
+    }
+    .gif_container{
+  height: 45vh;
+    }
+ .triangle{
+  left: 5rem;
+ }
+}
+@media screen and (max-width : 400px){
+    .gif_mainContainer{
+        bottom: 0rem;
+        left: 1rem;
+    }
+
 }

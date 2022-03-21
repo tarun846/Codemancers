@@ -27,7 +27,18 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:740px) {
+
+.image_positon{
+    display: none;
+}
+}
 
 
+@media screen and (max-width : 500px ){
 
-
+    .main_btn_facebook{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
