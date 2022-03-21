@@ -8,18 +8,16 @@
 @import 'Textarea';
 @import 'gif';
 @import 'Comment';
+@import 'window';
 
-.butter{
-    margin: 1rem;
-    width: 15rem;
-    height : 50vh;
-    object-fit: cover;
-    display: block;
-}
 .main_btn_facebook{
     margin: 1rem;
-    padding: 5px 10px;
+    padding: 5px 8px;
     font-size: 1rem;
+    border-radius: 50px;
+  font-family: monospace;
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+ cursor: pointer;
 }
 
 .Faceebok_comment{

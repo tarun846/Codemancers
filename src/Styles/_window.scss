@@ -1,0 +1,40 @@
+.Window_image{
+    min-height: 40vh;
+    width: 100%;
+    padding-left: 10px;
+    .profile_container{
+        padding: 10px;
+        font-family: sans-serif;
+   img{
+       width: 2rem;
+   }
+   .Window_profile{
+       display: flex;
+       align-items: center;
+     span{
+         margin-left: 10px;
+     }
+   }
+   h3{
+       padding-top: 1rem;
+   } 
+    } 
+
+   .butterfly_image_container{
+    display: flex;
+    align-items: flex-start;
+    
+  width: 100%;
+    .butter{
+        margin: 1rem;
+        // width: 90%;
+          height: 50vh;
+        object-fit: cover;
+    }
+}
+.comment_description{
+
+    font-family: monospace;
+    margin: 0rem 1rem;
+}
+}

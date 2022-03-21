@@ -371,19 +371,68 @@ section {
           align-items: flex-start;
 }
 
-.butter {
+.Window_image {
+  min-height: 40vh;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.Window_image .profile_container {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.Window_image .profile_container img {
+  width: 2rem;
+}
+
+.Window_image .profile_container .Window_profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Window_image .profile_container .Window_profile span {
+  margin-left: 10px;
+}
+
+.Window_image .profile_container h3 {
+  padding-top: 1rem;
+}
+
+.Window_image .butterfly_image_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.Window_image .butterfly_image_container .butter {
   margin: 1rem;
-  width: 15rem;
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
+}
+
+.Window_image .comment_description {
+  font-family: monospace;
+  margin: 0rem 1rem;
 }
 
 .main_btn_facebook {
   margin: 1rem;
-  padding: 5px 10px;
+  padding: 5px 8px;
   font-size: 1rem;
+  border-radius: 50px;
+  font-family: monospace;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .Faceebok_comment {

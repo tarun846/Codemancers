@@ -2,6 +2,7 @@ import React from 'react'
 import profile from '../Assets/photo (2).png';
 import Trash from '../Assets/filled-trash_delete.png';
 import butterfly from  '../Assets/butterfly.jpeg'
+import Datacomponent from './Datacomponent';
 
 function Comment({comments , setcomments ,setShow}) {
      
@@ -34,10 +35,9 @@ function Comment({comments , setcomments ,setShow}) {
     })
 
     return (
-        <div className = 'Comments' >
-          <h3 style = {{fontFamily : 'sans-serif'}} > 'This Photo has so many thing , it has so many beautiful things' </h3>
-         <img  src = {butterfly} className = 'butter' /> 
-           <button onClick = {()=>{setShow(true)}}   className = 'main_btn_facebook'  > Add a comment </button>
+       <div>
+         <Datacomponent/>
+           <button onClick = {()=>{setShow(true)}}    className = 'main_btn_facebook'  > Add a comment </button>
             {data}
         </div>
     )
