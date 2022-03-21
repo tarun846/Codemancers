@@ -91,6 +91,15 @@ section{
         }
     }
 }
+.Gif-CONTAINER{
+    display: flex;
+    .image_positon{
+        margin-top:2rem;
+        margin-right: 1rem;
+        width: 30%;
+        height: 30%;
+    }
+}
 @media screen and (max-width:500px) {
     .Main_textarea{
     margin: 2rem;

@@ -73,7 +73,7 @@ function Textarea({comments, setcomments ,setShow}) {
             </div>
 
             <div className = 'textArea' >
-
+  <div className = 'Gif-CONTAINER' >
              <textarea 
              value = {value}
              onChange = {(e)=> setvalue(e.target.value) }
@@ -81,7 +81,7 @@ function Textarea({comments, setcomments ,setShow}) {
              />
 
            { imagedata !== '' ? <img src = {imagedata}  className = 'image_positon'   /> : ' '   }  
-
+</div>
          <img  src = {profile}   className = 'profile_img'   />
 
          <div className = 'text_buttonsContainer' >
