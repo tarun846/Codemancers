@@ -1,8 +1,9 @@
 .Comments{
     padding: 1rem;
-    
+}    
     .comment_profile{
      width: 2.2rem;
+     margin-left: 1rem;
  }
    h1{
         font-family: sans-serif;
@@ -29,7 +30,7 @@
      }
 }
   
-}
+
 .text_box_comment{
     display: flex;
     padding-top: 10px;
@@ -40,9 +41,10 @@
     width: 100%;
 }
 .trash{
-    width: 1.5rem;
-    object-fit: contain;
+    width: 1rem;
+    object-fit: cover;
     cursor: pointer;
+    margin-left: 10px;
     
 }
 .img_Container{
