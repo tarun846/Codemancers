@@ -1,7 +1,7 @@
 .Search_image{
-    border: 1px solid black;
+    border: 1px solid rgba($color: #000000, $alpha: 0.1);
     height: 20rem;
-    width: 15rem;
+    width: 20rem;
      
     button{
         width: 100%;
@@ -48,7 +48,7 @@ border-bottom-color: gray ;
     overflow-y: scroll;
     height: 84%;
     width: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr ;
   z-index: -100;
   background-color: white ;
 
@@ -72,6 +72,9 @@ border-bottom-color: gray ;
  .triangle{
   left: 5rem;
  }
+ .image_grid{
+  grid-template-columns: 1fr ; 
+}
 }
 @media screen and (max-width : 400px){
     .gif_mainContainer{

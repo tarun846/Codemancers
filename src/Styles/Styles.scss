@@ -27,12 +27,20 @@
     width: 100%;
 
 }
-.cross{
-    font-family: monospace;
-    margin-left: 10px;
-    font-size: 1rem;
-    cursor: pointer;
+.textheader_second{
+    position : absolute ;
+    right: 10px;
+    .cross{
+        font-family: sans-serif;
+        margin-left: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+     font-size: 1rem;
+         
+      
+    }
 }
+
 
 // @media screen and (max-width:740px) {
 

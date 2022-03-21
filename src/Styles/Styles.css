@@ -28,7 +28,7 @@ section {
           box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: white;
-  width: 50rem;
+  width: 40rem;
 }
 
 .textheader {
@@ -225,9 +225,9 @@ section {
 }
 
 .Search_image {
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   height: 20rem;
-  width: 15rem;
+  width: 20rem;
 }
 
 .Search_image button {
@@ -269,8 +269,8 @@ section {
   overflow-y: scroll;
   height: 84%;
   width: 100%;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   z-index: -100;
   background-color: white;
 }
@@ -290,6 +290,10 @@ section {
   }
   .triangle {
     left: 5rem;
+  }
+  .image_grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
@@ -387,11 +391,17 @@ section {
   width: 100%;
 }
 
-.cross {
-  font-family: monospace;
+.textheader_second {
+  position: absolute;
+  right: 10px;
+}
+
+.textheader_second .cross {
+  font-family: sans-serif;
   margin-left: 10px;
   font-size: 1rem;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 500px) {
