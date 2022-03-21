@@ -19,16 +19,16 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  padding-top: 5rem;
-  border-radius: 10px;
+  padding-top: 1rem;
 }
 
 .Main_textarea {
   min-height: auto;
   -webkit-box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: white;
+  width: 50rem;
 }
 
 .textheader {
@@ -47,13 +47,15 @@ section {
 }
 
 .textheader .textheader_children {
-  margin-left: 2rem;
+  padding-left: 5px;
+  margin-left: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .textheader .textheader_children span {
@@ -63,7 +65,7 @@ section {
 }
 
 .textheader .textheader_children img {
-  width: 2rem;
+  width: 1rem;
 }
 
 .textArea {
@@ -84,24 +86,32 @@ section {
   width: 100%;
 }
 
-.textArea .profile_img {
-  width: 2rem;
-  position: absolute;
-  top: 10px;
-  left: 0;
+.textArea .Gif-CONTAINERs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.textArea .Gif-CONTAINERs .image_positon {
+  width: 20%;
+  height: 20%;
 }
 
 .text_buttonsContainer {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: unset;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
 }
 
 .text_buttonsContainer .Text_buttons {
@@ -109,35 +119,29 @@ section {
 }
 
 .text_buttonsContainer .Text_buttons .input {
-  width: 15rem;
+  width: 100%;
   height: 2rem;
   border-radius: 50px;
   cursor: pointer;
   background-color: whitesmoke;
   border: black;
   padding-top: 5px;
-  padding-left: 14px;
-  width: 15rem;
+  padding-left: 2rem;
+  font-size: 14px;
 }
 
 .text_buttonsContainer .Text_buttons img {
   width: 1rem;
   position: absolute;
-  right: 10px;
+  left: 9px;
   top: 8px;
 }
 
-.Gif-CONTAINER {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.Gif-CONTAINER .image_positon {
-  margin-top: 2rem;
-  margin-right: 1rem;
-  width: 30%;
-  height: 30%;
+@media screen and (max-width: 750px) {
+  .Main_textarea {
+    margin: 2rem;
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -154,9 +158,6 @@ section {
   .textheader .textheader_children img {
     width: 1rem;
   }
-  .text_buttonsContainer .Text_buttons .input {
-    width: 10rem;
-  }
 }
 
 @media screen and (max-width: 450px) {
@@ -169,6 +170,58 @@ section {
   .textheader .textheader_children span {
     font-size: 10px;
   }
+}
+
+.textheader_first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.textheader_second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.TextArea_button_Container {
+  width: 100%;
+  height: 6vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.TextArea_button_Container .TextArea_buttons button {
+  margin-right: 1rem;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 1px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.TextArea_button_Container .TextArea_buttons button:nth-child(2) {
+  background-color: #77cce9;
+  color: white;
+}
+
+.profile_img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 2rem;
 }
 
 .Search_image {
@@ -189,7 +242,7 @@ section {
   height: 0px;
   border: 10px solid;
   border-color: transparent;
-  border-bottom-color: black;
+  border-bottom-color: gray;
 }
 
 .gif_container {
@@ -200,8 +253,8 @@ section {
 
 .gif_mainContainer {
   position: absolute;
-  bottom: -1rem;
-  left: 3rem;
+  top: 5rem;
+  left: -1rem;
 }
 
 .gif_input {
@@ -214,7 +267,7 @@ section {
   display: -ms-grid;
   display: grid;
   overflow-y: scroll;
-  height: 80%;
+  height: 84%;
   width: 100%;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
@@ -228,23 +281,7 @@ section {
      object-fit: contain;
 }
 
-@media screen and (max-width: 1400px) {
-  .gif_mainContainer {
-    left: 15rem;
-  }
-}
-
-@media screen and (max-width: 910px) {
-  .gif_mainContainer {
-    left: 2rem;
-  }
-}
-
 @media screen and (max-width: 500px) {
-  .gif_mainContainer {
-    bottom: -1rem;
-    left: 1rem;
-  }
   .Search_image {
     width: 12rem;
   }
@@ -330,9 +367,18 @@ section {
           align-items: flex-start;
 }
 
+.butter {
+  margin: 1rem;
+  width: 15rem;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
 .main_btn_facebook {
   margin: 1rem;
-  padding: 10px 15px;
+  padding: 5px 10px;
   font-size: 1rem;
 }
 

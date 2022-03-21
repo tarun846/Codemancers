@@ -15,7 +15,7 @@ width: 0px;
 height: 0px;
 border: 10px solid  ;
 border-color: transparent;
-border-bottom-color:black ;
+border-bottom-color: gray ;
 
 }
 .gif_container{
@@ -28,8 +28,9 @@ border-bottom-color:black ;
 }
 .gif_mainContainer{
     position: absolute;
-    bottom: -1rem;
-    left: 3rem;
+    top: 5rem;
+
+   left: -1rem;
 
     
   
@@ -45,7 +46,7 @@ border-bottom-color:black ;
 .image_grid{
     display: grid;
     overflow-y: scroll;
-    height: 80%;
+    height: 84%;
     width: 100%;
     grid-template-columns: 1fr;
   z-index: -100;
@@ -57,25 +58,10 @@ border-bottom-color:black ;
       
     }
 }
-@media screen and (max-width : 1400px){
-    .gif_mainContainer{
-  left: 15rem;
-    }
-}
-@media screen and (max-width : 910px){
-    .gif_mainContainer{
-        left: 2rem;
-
-    }
-}
 
 
 @media screen and (max-width : 500px){
-    .gif_mainContainer{
-        bottom: -1rem;
-        left: 1rem;
-      
-    }
+ 
     .Search_image{
     
         width: 12rem;

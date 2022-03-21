@@ -1,8 +1,9 @@
 import React from 'react'
 import profile from '../Assets/photo (2).png';
 import Trash from '../Assets/filled-trash_delete.png';
+import butterfly from  '../Assets/butterfly.jpeg'
 
-function Comment({comments , setcomments}) {
+function Comment({comments , setcomments ,setShow}) {
      
   
       function handleDelete(id) {
@@ -34,7 +35,9 @@ function Comment({comments , setcomments}) {
 
     return (
         <div className = 'Comments' >
-          <h1>   Comments... </h1>
+          <h3 style = {{fontFamily : 'sans-serif'}} > 'This Photo has so many thing , it has so many beautiful things' </h3>
+         <img  src = {butterfly} className = 'butter' /> 
+           <button onClick = {()=>{setShow(true)}}   className = 'main_btn_facebook'  > Add a comment </button>
             {data}
         </div>
     )

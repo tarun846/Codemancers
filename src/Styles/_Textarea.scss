@@ -6,14 +6,18 @@ section{
     align-items: flex-start;
     justify-content: center;
     position: fixed;
-    padding-top: 5rem;
-    border-radius: 10px;
+    padding-top: 1rem;
+
 }
+
+
+
 .Main_textarea{
    min-height: auto;
    box-shadow: 10px 5px 10px 10px rgba($color: #000000, $alpha: 0.3);
-   border-radius: 20px;
+   border-radius: 10px;
    background-color: white;
+   width: 50rem;
 }
 .textheader{
    
@@ -28,16 +32,18 @@ section{
     
   .textheader_children{
 
-    margin-left: 2rem;
+    padding-left: 5px;
+    margin-left: 1rem;
     display: flex;
     align-items: center;
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.3);
     span {
         margin-left: 4px;
         font-size: 12px;
         font-family: sans-serif;
     }
     img {
-        width: 2rem;
+        width: 1rem;
     }
 }
 }
@@ -56,55 +62,66 @@ section{
         resize: none;
         width: 100%;
     }
-    .profile_img{
-        width: 2rem;
-        position: absolute;
-        top: 10px;
-        left: 0;
+
+    .Gif-CONTAINERs{
+        // height: 50vh;
+        // width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     .image_positon{
+      width: 20%;
+      height: 20%;
+     }
     }
+ 
 }
 .text_buttonsContainer{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: unset;
+    display: grid;
+   
+  grid-template-columns: 1fr 1fr ;
+  gap: 10px ;
+  padding: 10px;
+ 
+    position: relative;
     .Text_buttons{
         // background-color: rebeccapurple;
         position: relative;
         .input {
-            width: 15rem;
+            width: 100%;
             height: 2rem;
             border-radius: 50px;
              cursor: pointer;
              background-color: whitesmoke;
             border: rgba($color: #000000, $alpha: 1);
              padding-top: 5px;
-             padding-left: 14px; 
-             width: 15rem;  
+             padding-left: 2rem; 
+             font-size: 14px;
+             
+            //  width: 15rem;  
         }
         img {
             width: 1rem;
             position: absolute;
-            right: 10px;
+            left: 9px ;
            top : 8px
         }
     }
 }
-.Gif-CONTAINER{
-    display: flex;
-    .image_positon{
-        margin-top:2rem;
-        margin-right: 1rem;
-        width: 30%;
-        height: 30%;
-    }
+
+@media screen and (max-width:750px) {
+    .Main_textarea{
+        margin: 2rem;
+      width :80%
+        }
+
 }
 @media screen and (max-width:500px) {
     .Main_textarea{
-    margin: 2rem;
-  width :90%
-    }
+        margin: 2rem;
+      width :90%
+        }
     .textheader{
   min-height: 10vh;
     }
@@ -118,11 +135,7 @@ section{
         }
     }
     }
-    .text_buttonsContainer{
-        .Text_buttons  .input {
-  width: 10rem;
-        }
-    }
+   
 }
 
 @media screen and (max-width:450px) {
@@ -136,4 +149,40 @@ section{
     }
     }
 
+}
+.textheader_first{
+    display: flex;
+}
+.textheader_second{
+    display: flex;
+    // justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.TextArea_button_Container{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.3); 
+    align-items: center;
+    .TextArea_buttons button { 
+  margin-right: 1rem;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: 1px solid   rgba($color: #000000, $alpha: 0.3);
+     border-radius: 1px;
+     cursor: pointer;
+     font-family: sans-serif;
+  &:nth-child(2){
+      background-color: rgb(119, 204, 233);
+      color: white;
+  }
+}
+}
+.profile_img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 2rem;
 }

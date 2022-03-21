@@ -3,6 +3,7 @@ import Pen from '../Assets/photo (4).png'
 import photo from '../Assets/photo (1).png'
 import video from '../Assets/photo (3).png'
 import profile from '../Assets/photo (2).png'
+import Papa from '../Assets/papaamma.jpg'
 import GifSearch from './GifSearch'
 
 function Textarea({comments, setcomments ,setShow}) {
@@ -44,64 +45,92 @@ function Textarea({comments, setcomments ,setShow}) {
 
             <div className = 'textheader' style = {{position : 'relative'}}  >
 
-            <div className = 'textheader_children' >
+           <div className = 'textheader_first' >
+           <div className = 'textheader_children' >
 
-               <img src = {Pen}  alt ='pen'  />
+<img src = {Pen}  alt ='pen'  />
 
-              <span> Compose post </span>
+<span> Compose post </span>
 
-           </div>  
+</div>  
 
-         <div  className = 'textheader_children'>
+<div  className = 'textheader_children'>
 
-      <img src = {photo} alt ='photo' />
+<img src = {photo} alt ='photo' />
 
-     <span> Photo/Video Album </span>
+<span> Photo/Video Album </span>
 
-        </div> 
+</div> 
 
-          <div className = 'textheader_children'>
+<div className = 'textheader_children'>
 
 
-      <img src = {video} alt = 'video'  />
+<img src = {video} alt = 'video'  />
 
-       <span> Live Video </span>
+<span> Live Video </span>
 
-        </div>
+</div>
+           </div>
+        <div className = 'textheader_second' >
         <h4 onClick = {()=>{setShow(false)}} className = 'cross'  > X </h4>
+        </div>
 
             </div>
 
             <div className = 'textArea' >
-  <div className = 'Gif-CONTAINER' >
+ 
              <textarea 
              value = {value}
              onChange = {(e)=> setvalue(e.target.value) }
-             placeholder = 'Comment...'
+             placeholder = 'Write something'
              />
+<div className = 'Gif-CONTAINERs' >
 
-           { imagedata !== '' ? <img src = {imagedata}  className = 'image_positon'   /> : ' '   }  
+ {imagedata !== '' ? <img src = {imagedata}  className = 'image_positon'/> : " "  }  
 </div>
+         
+
          <img  src = {profile}   className = 'profile_img'   />
 
          <div className = 'text_buttonsContainer' >
 
          <div className = 'Text_buttons' >
-              <div className = 'input' children = 'Add gif' disabled = {true}  onClick = {handleclick}  />
-               <img src = {Pen} /> 
+         <img src = {Pen} /> 
+              <div className = 'input' children = 'Tag friends' disabled = {true}   />
            </div>
 
            <div className = 'Text_buttons' >
-              <div className = 'input' disabled = {true}  children = 'Submit' onClick = {submit}  />
-               <img src = {profile} /> 
+           <img src = {profile} /> 
+
+              <div className = 'input' disabled = {true}  children = 'Check in' />
            </div>
+
+           <div className = 'Text_buttons' >
+           <img src = {Pen} /> 
+              <div className = 'input' children = 'Gif' disabled = {true}  onClick = {handleclick}  />
+               
+           </div>
+
+           <div className = 'Text_buttons' >
+           <img src = {profile} /> 
+              <div className = 'input' disabled = {true}  children = 'Tag Event' />
+             
+           </div>
+           { data ?    <GifSearch setimagedata = {setimagedata}  setdata = {setdata} /> : '' }
             </div>
          
             </div>
-            { data ?    <GifSearch setimagedata = {setimagedata}  setdata = {setdata} /> : '' }
+           
 
+
+    <div className = 'TextArea_button_Container' >
+            <div className = 'TextArea_buttons' >
+            <button> Only me </button>
+            <button  onClick = {submit}  > post  </button>
             </div>
-
+   </div>
+            </div>
+ 
         </section>
     )
 }
