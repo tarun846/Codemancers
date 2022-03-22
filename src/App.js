@@ -7,7 +7,7 @@ function App() {
   return (
       <div  className = 'Faceebok_comment'  >
       {  show === true ?  <Textarea  setcomments = {setcomments} comments = {comments} setShow = {setShow} />  : '' }
-     
+      
        <Comment comments = {comments} setcomments = {setcomments} setShow = {setShow} />
      
       </div>

@@ -38,6 +38,7 @@ function Comment({comments , setcomments ,setShow}) {
        <div>
          <Datacomponent/>
            <button onClick = {()=>{setShow(true)}}    className = 'main_btn_facebook'  > Add a comment </button>
+           <h2 style = {{paddingLeft : '10px'}} > your comments </h2  >
             {data}
         </div>
     )
