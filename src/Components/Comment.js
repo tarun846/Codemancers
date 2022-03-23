@@ -1,10 +1,11 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import profile from '../Assets/photo (2).png';
 import Trash from '../Assets/filled-trash_delete.png';
-import butterfly from  '../Assets/butterfly.jpeg'
 import Datacomponent from './Datacomponent';
+import {Showcontext} from '../App'
 
-function Comment({comments , setcomments ,setShow}) {
+function Comment() {
+  const {comments, setcomments ,setShow} = useContext(Showcontext)
      
   
       function handleDelete(id) {
@@ -33,12 +34,14 @@ function Comment({comments , setcomments ,setShow}) {
             </div>
         )
     })
+    
 
     return (
        <div>
-         <Datacomponent/>
-           <button onClick = {()=>{setShow(true)}}    className = 'main_btn_facebook'  > Add a comment </button>
-           <h2 style = {{paddingLeft : '10px'}} > your comments </h2  >
+         <Datacomponent setShow ={setShow} />
+         
+         
+           <h2 className = 'Head_text' > your comments </h2  >
             {data}
         </div>
     )

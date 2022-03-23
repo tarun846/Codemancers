@@ -1,7 +1,42 @@
+
+    .Head_text{
+        font-family: monospace;
+        margin: 0  1.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+header{
+    min-height: 5vh;
+    font-family: sans-serif;
+   border: 1px solid #e6e6e6 ;
+   background-color: #da6ada;
+   color: white;
+    nav{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     padding: 1rem;
+    }
+}
+
+
 .Window_image{
+    padding-top: 2rem;
+
     min-height: 40vh;
     width: 100%;
     padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .Window_container{
+        width: 650px;
+        border: 1px solid #e6e6e6 ;
+        background: "#ffffff" ;
+    }
     .profile_container{
         padding: 10px;
         font-family: sans-serif;
@@ -22,19 +57,71 @@
 
    .butterfly_image_container{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     
   width: 100%;
     .butter{
         margin: 1rem;
-        // width: 90%;
+        width: 100%;
           height: 50vh;
+          object-position: center;
         object-fit: cover;
     }
 }
 .comment_description{
 
     font-family: monospace;
-    margin: 0rem 1rem;
+    margin: 0  1.5rem;
 }
+}
+
+.Card_buttons_wrapper{
+    padding: 10px;
+    padding-left: 15px;
+    padding: 10px;
+    z-index: -1;
+    cursor: pointer; 
+     svg{
+         margin-right: 10px;
+     }
+}
+
+.like {
+    animation: like-button-animation 0.45s;
+    animation-timing-function: ease-in-out;
+    transform: scale(1) ;
+  }
+ .liked{
+    animation: liked-button-animation 0.45s;
+    animation-timing-function: ease-in-out;
+    transform: scale(1) ;
+  };
+  @keyframes like-button-animation  {
+    0%  { transform: scale(1) };
+    25% { transform:  scale(1.2) };
+    50% { transform: scale(0.95) };
+    100% { transform: scale(1) }
+  };
+  @keyframes liked-button-animation {
+    0%  { transform: scale(1) };
+    25%  { transform: scale(1.2) };
+    50%  { transform: scale(0.95) };
+    100%  { transform: scale(1)  } ;
+  }
+
+
+
+
+
+@media screen and (max-width : 650px){
+    .Window_image{
+     display: block;
+
+     .Window_container{
+     width: 100%; 
+     border: none;
+    }
+    }
 }

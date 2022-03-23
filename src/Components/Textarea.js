@@ -1,21 +1,22 @@
-import React , {useState} from 'react'
+import React , {useState, useContext} from 'react'
 import Pen from '../Assets/photo (4).png'
 import photo from '../Assets/photo (1).png'
 import video from '../Assets/photo (3).png'
 import profile from '../Assets/photo (2).png'
-import Papa from '../Assets/papaamma.jpg'
 import GifSearch from './GifSearch'
+import {Showcontext} from '../App'
 
-function Textarea({comments, setcomments ,setShow}) {
-
-      const [data, setdata] = useState(false)
-      const [value , setvalue] = useState(' ')
-      const [imagedata , setimagedata] = useState('')
+function Textarea() {
+   const {comments, setcomments ,setShow} = useContext(Showcontext)
+   
+   const [data, setdata] = useState(false)
+   const [value , setvalue] = useState(' ')
+   const [imagedata , setimagedata] = useState('')
 
   
     function submit() { 
-       
-        if (imagedata !== '' && value !== '' )  {
+
+        if ( value !==  ''   )  {
        
         const dataobject = {
         imgid : imagedata,
@@ -39,7 +40,7 @@ function Textarea({comments, setcomments ,setShow}) {
        }
 
     return (
-          <section >
+          <section className = 'Main_section' >
        <div className = 'Main_textarea'  >
 
 

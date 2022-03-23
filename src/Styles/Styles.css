@@ -5,7 +5,35 @@
           box-sizing: border-box;
 }
 
-section {
+.main_btn_facebook {
+  margin: 1.5rem;
+  padding: 5px 8px;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-family: monospace;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.Faceebok_comment {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.textheader_second {
+  position: absolute;
+  right: 10px;
+}
+
+.textheader_second .cross {
+  font-family: sans-serif;
+  margin-left: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.Main_section {
   width: 100%;
   height: 100vh;
   background-color: rgba(200, 200, 200, 0.5);
@@ -20,6 +48,7 @@ section {
           justify-content: center;
   position: fixed;
   padding-top: 1rem;
+  z-index: 1;
 }
 
 .Main_textarea {
@@ -62,6 +91,8 @@ section {
   margin-left: 4px;
   font-size: 12px;
   font-family: sans-serif;
+  color: #8484e9;
+  font-weight: bold;
 }
 
 .textheader .textheader_children img {
@@ -264,6 +295,7 @@ section {
 .gif_mainContainer {
   position: absolute;
   top: 5rem;
+  z-index: 1;
   left: -1rem;
 }
 
@@ -383,10 +415,59 @@ h1 {
           align-items: flex-start;
 }
 
+.Head_text {
+  font-family: monospace;
+  margin: 0  1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+header {
+  min-height: 5vh;
+  font-family: sans-serif;
+  border: 1px solid #e6e6e6;
+  background-color: #da6ada;
+  color: white;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
 .Window_image {
+  padding-top: 2rem;
   min-height: 40vh;
   width: 100%;
   padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Window_image .Window_container {
+  width: 650px;
+  border: 1px solid #e6e6e6;
+  background: "#ffffff";
 }
 
 .Window_image .profile_container {
@@ -419,56 +500,144 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   width: 100%;
 }
 
 .Window_image .butterfly_image_container .butter {
   margin: 1rem;
+  width: 100%;
   height: 50vh;
+  -o-object-position: center;
+     object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .Window_image .comment_description {
   font-family: monospace;
-  margin: 0rem 1rem;
+  margin: 0  1.5rem;
 }
 
-.main_btn_facebook {
-  margin: 1rem;
-  padding: 5px 8px;
-  font-size: 1rem;
-  border-radius: 50px;
-  font-family: monospace;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+.Card_buttons_wrapper {
+  padding: 10px;
+  padding-left: 15px;
+  padding: 10px;
+  z-index: -1;
   cursor: pointer;
 }
 
-.Faceebok_comment {
-  min-height: 100vh;
-  width: 100%;
+.Card_buttons_wrapper svg {
+  margin-right: 10px;
 }
 
-.textheader_second {
-  position: absolute;
-  right: 10px;
+.like {
+  -webkit-animation: like-button-animation 0.45s;
+          animation: like-button-animation 0.45s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-.textheader_second .cross {
-  font-family: sans-serif;
-  margin-left: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
+.liked {
+  -webkit-animation: liked-button-animation 0.45s;
+          animation: liked-button-animation 0.45s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-@media screen and (max-width: 500px) {
-  .main_btn_facebook {
-    padding: 5px 10px;
-    font-size: 12px;
+@-webkit-keyframes like-button-animation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes like-button-animation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes liked-button-animation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes liked-button-animation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .Window_image {
+    display: block;
+  }
+  .Window_image .Window_container {
+    width: 100%;
+    border: none;
   }
 }
 /*# sourceMappingURL=Styles.css.map */

@@ -5,14 +5,10 @@
     box-sizing: border-box;
     // overflow: hidden;
 }
-@import 'Textarea';
-@import 'gif';
-@import 'Comment';
-@import 'window';
 
 
 .main_btn_facebook{
-     margin: 1rem;
+    margin: 1.5rem;
     padding: 5px 8px;
     font-size: 1rem;
     border-radius: 50px;
@@ -40,19 +36,10 @@
     }
 }
 
-
-// @media screen and (max-width:740px) {
-
-// .image_positon{
-//     display: none;
-// }
-// }
+@import 'Textarea';
+@import 'gif';
+@import 'Comment';
+@import 'window';
 
 
-@media screen and (max-width : 500px ){
 
-    .main_btn_facebook{
-        padding: 5px 10px;
-        font-size: 12px;
-    }
-}
